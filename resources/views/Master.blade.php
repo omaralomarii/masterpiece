@@ -69,21 +69,39 @@
                                 <li><a href="#">Pages</a>
                                     <ul class="sub-menu">
                                         <li><a href="/404">404 page</a></li>
+
                                         <li><a href="/about">About</a></li>
+
                                         <li><a href="/cart">Cart</a></li>
-                                        <li><a href="/checkout">Check Out</a></li>
+                                        @auth
+                                            <li><a href="/checkout">Check Out</a></li>
+                                        @endauth
+
                                         <li><a href="/contact">Contact</a></li>
                                         {{-- <li><a href="/Bmicalc">Services</a></li> --}}
                                         <li><a href="/shop">Shop</a></li>
                                         {{-- <li><a href="/bmi">BMI</a></li> --}}
-                                        <li><a href="/profile">Profile</a></li>
-                                        <li><a href="/registration">registration</a></li>
+                                        @auth
+                                            <li><a href="/profile">Profile</a></li>
+                                        @endauth
+
+                                        <li><a href="/registration">register</a></li>
+                                        <li><a href="/login">Login</a></li>
+                                        @auth
+                                            <li><a href="/signout">logOut</a></li>
+                                        @endauth
+
                                     </ul>
                                 </li>
                                 <li><a href="Bmicalc">Services</a>
                                     <ul class="sub-menu">
-                                        <li><a href="Bmicalc">BMI Calculate</a></li>
-                                        <li><a href="pt">Personal trainer</a></li>
+                                        @auth
+                                            <li><a href="/bmicalc">BMI Calculate</a></li>
+                                        @endauth
+                                        @auth
+                                            <li><a href="/pt">Personal trainer</a></li>
+                                        @endauth
+
                                     </ul>
                                 </li>
                                 <li><a href="/contact">Contact</a></li>
@@ -145,10 +163,10 @@
 
 
     <!-- footer -->
-    <div class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
+    <div class="footer-area ">
+        <div class="container ">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-3">
                     <div class="footer-box about-widget">
                         <h2 class="widget-title">About us</h2>
                         <p>We believe in being different. Not merely for the sake of being dissimilar, but different by
@@ -157,7 +175,7 @@
                             our members with the best fitness technologies </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="footer-box get-in-touch">
                         <h2 class="widget-title">Get in Touch</h2>
                         <ul>
@@ -167,7 +185,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-3">
                     <div class="footer-box pages">
                         <h2 class="widget-title">Pages</h2>
                         <ul>
@@ -176,26 +194,26 @@
                             <li><a href="cart.html">Cart</a></li>
                             <li><a href="checkout.html">Check Out</a></li>
                             <li><a href="contact.html">Contact</a></li>
-                            <li><a href="Bmicalc.html">Services</a></li>
+                            {{-- <li><a href="Bmicalc.html">Services</a></li>
                             <li><a href="shop.html">Shop</a></li>
                             <li><a href="bmi.html">BMI</a></li>
                             <li><a href="profile.html">Profile</a></li>
-                            <li><a href="registration.html">registration</a></li>
+                            <li><a href="registration.html">registration</a></li> --}}
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                {{-- <div class="col-lg-3 col-md-6">
                     <div class="footer-box subscribe">
                         <h2 class="widget-title">Subscribe</h2>
                         <p>Subscribe to our mailing list to get the latest updates.</p>
                         <form action="index.html">
                             <input type="email" placeholder="Email">
                             <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form>
-                    </div>
-                </div>
+                        </form> --}}
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <!-- end footer -->
 

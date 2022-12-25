@@ -13,15 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('donations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("user_id")->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('phone');
-            $table->string('address');
-            $table->string('zip');
+
+            $table->string('email')->nullable();
+            $table->string('card')->nullable();
+            $table->timestamp('date')->nullable();
+
+            $table->float('amount');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('donations');
     }
 };

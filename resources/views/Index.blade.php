@@ -129,21 +129,21 @@
                 <h2>WHAY Gold</h2>
 
                 <!-- <div class="size">
-                                <h3>Size :</h3>
-                                <span>7</span>
-                                <span>8</span>
-                                <span>9</span>
-                                <span>10</span>
-                            </div>
+                                                                                        <h3>Size :</h3>
+                                                                                        <span>7</span>
+                                                                                        <span>8</span>
+                                                                                        <span>9</span>
+                                                                                        <span>10</span>
+                                                                                    </div>
 
-                            <div class="color">
+                                                                                    <div class="color">
 
-                                <h3>Color :</h3>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div> -->
-                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                                                                                        <h3>Color :</h3>
+                                                                                        <span></span>
+                                                                                        <span></span>
+                                                                                        <span></span>
+                                                                                    </div> -->
+                <a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
 
 
@@ -159,21 +159,21 @@
                 <h2>WHAY Gold</h2>
 
                 <!-- <div class="size">
-                                <h3>Size :</h3>
-                                <span>7</span>
-                                <span>8</span>
-                                <span>9</span>
-                                <span>10</span>
-                            </div>
+                                                                                        <h3>Size :</h3>
+                                                                                        <span>7</span>
+                                                                                        <span>8</span>
+                                                                                        <span>9</span>
+                                                                                        <span>10</span>
+                                                                                    </div>
 
-                            <div class="color">
+                                                                                    <div class="color">
 
-                                <h3>Color :</h3>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div> -->
-                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                                                                                        <h3>Color :</h3>
+                                                                                        <span></span>
+                                                                                        <span></span>
+                                                                                        <span></span>
+                                                                                    </div> -->
+                <a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
 
 
@@ -189,21 +189,21 @@
                 <h2>WHAY Gold</h2>
 
                 <!-- <div class="size">
-                                <h3>Size :</h3>
-                                <span>7</span>
-                                <span>8</span>
-                                <span>9</span>
-                                <span>10</span>
-                            </div>
+                                                                                        <h3>Size :</h3>
+                                                                                        <span>7</span>
+                                                                                        <span>8</span>
+                                                                                        <span>9</span>
+                                                                                        <span>10</span>
+                                                                                    </div>
 
-                            <div class="color">
+                                                                                    <div class="color">
 
-                                <h3>Color :</h3>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div> -->
-                <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                                                                                        <h3>Color :</h3>
+                                                                                        <span></span>
+                                                                                        <span></span>
+                                                                                        <span></span>
+                                                                                    </div> -->
+                <a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
 
 
@@ -262,13 +262,11 @@
 
 
     <section class="pricing-section spad">
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- <div class="section-title">
-                                    <span>Our Plan</span>
-                                    <h2>Choose your pricing plan</h2>
-                                </div> -->
+
 
                     <div class="col-lg-8 offset-lg-2 text-center">
                         <div class="section-title"> <br><br>
@@ -281,11 +279,13 @@
                 </div>
             </div>
             <div class="row justify-content-center">
+
+
                 <div class="col-lg-4 col-md-8">
                     <div class="ps-item">
-                        <h3>Class drop-in</h3>
+                        <h3>3 Month unlimited</h3>
                         <div class="pi-price">
-                            <h2>$ 39.0</h2>
+                            <h2>JD 39.0</h2>
                             <span>SINGLE CLASS</span>
                         </div>
                         <ul>
@@ -296,15 +296,15 @@
                             <li>Month to mouth</li>
                             <li>No time restriction</li>
                         </ul>
-                        <a href="checkout.html" class="primary-btn pricing-btn">Enroll now</a>
-                        <a href="checkout.html" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        <a href="./donate" class="primary-btn pricing-btn ">Subscribe Now</a>
+                        <a href="./donate" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
                     <div class="ps-item">
                         <h3>12 Month unlimited</h3>
                         <div class="pi-price">
-                            <h2>$ 99.0</h2>
+                            <h2>JD 99.0</h2>
                             <span>SINGLE CLASS</span>
                         </div>
                         <ul>
@@ -315,15 +315,15 @@
                             <li>Month to mouth</li>
                             <li>No time restriction</li>
                         </ul>
-                        <a href="checkout.html" class="primary-btn pricing-btn">Enroll now</a>
-                        <a href="checkout.html" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        <a href="./donate" class="primary-btn pricing-btn">Subscribe Now</a>
+                        <a href="./donate" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
                     <div class="ps-item">
                         <h3>6 Month unlimited</h3>
                         <div class="pi-price">
-                            <h2>$ 59.0</h2>
+                            <h2>JD 59.0</h2>
                             <span>SINGLE CLASS</span>
                         </div>
                         <ul>
@@ -334,8 +334,8 @@
                             <li>Month to mouth</li>
                             <li>No time restriction</li>
                         </ul>
-                        <a href="checkout.html" class="primary-btn pricing-btn">Enroll now</a>
-                        <a href="checkout.html" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        <a href="./donate" class="primary-btn pricing-btn">Subscribe Now</a>
+                        <a href="./donate" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
                     </div>
                 </div>
             </div>
