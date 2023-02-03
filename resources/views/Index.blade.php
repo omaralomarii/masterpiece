@@ -129,20 +129,20 @@
                 <h2>WHAY Gold</h2>
 
                 <!-- <div class="size">
-                                                                                        <h3>Size :</h3>
-                                                                                        <span>7</span>
-                                                                                        <span>8</span>
-                                                                                        <span>9</span>
-                                                                                        <span>10</span>
-                                                                                    </div>
+                                                                                            <h3>Size :</h3>
+                                                                                            <span>7</span>
+                                                                                            <span>8</span>
+                                                                                            <span>9</span>
+                                                                                            <span>10</span>
+                                                                                        </div>
 
-                                                                                    <div class="color">
+                                                                                        <div class="color">
 
-                                                                                        <h3>Color :</h3>
-                                                                                        <span></span>
-                                                                                        <span></span>
-                                                                                        <span></span>
-                                                                                    </div> -->
+                                                                                            <h3>Color :</h3>
+                                                                                            <span></span>
+                                                                                            <span></span>
+                                                                                            <span></span>
+                                                                                        </div> -->
                 <a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
 
@@ -159,20 +159,20 @@
                 <h2>WHAY Gold</h2>
 
                 <!-- <div class="size">
-                                                                                        <h3>Size :</h3>
-                                                                                        <span>7</span>
-                                                                                        <span>8</span>
-                                                                                        <span>9</span>
-                                                                                        <span>10</span>
-                                                                                    </div>
+                                                                                            <h3>Size :</h3>
+                                                                                            <span>7</span>
+                                                                                            <span>8</span>
+                                                                                            <span>9</span>
+                                                                                            <span>10</span>
+                                                                                        </div>
 
-                                                                                    <div class="color">
+                                                                                        <div class="color">
 
-                                                                                        <h3>Color :</h3>
-                                                                                        <span></span>
-                                                                                        <span></span>
-                                                                                        <span></span>
-                                                                                    </div> -->
+                                                                                            <h3>Color :</h3>
+                                                                                            <span></span>
+                                                                                            <span></span>
+                                                                                            <span></span>
+                                                                                        </div> -->
                 <a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
 
@@ -189,20 +189,20 @@
                 <h2>WHAY Gold</h2>
 
                 <!-- <div class="size">
-                                                                                        <h3>Size :</h3>
-                                                                                        <span>7</span>
-                                                                                        <span>8</span>
-                                                                                        <span>9</span>
-                                                                                        <span>10</span>
-                                                                                    </div>
+                                                                                            <h3>Size :</h3>
+                                                                                            <span>7</span>
+                                                                                            <span>8</span>
+                                                                                            <span>9</span>
+                                                                                            <span>10</span>
+                                                                                        </div>
 
-                                                                                    <div class="color">
+                                                                                        <div class="color">
 
-                                                                                        <h3>Color :</h3>
-                                                                                        <span></span>
-                                                                                        <span></span>
-                                                                                        <span></span>
-                                                                                    </div> -->
+                                                                                            <h3>Color :</h3>
+                                                                                            <span></span>
+                                                                                            <span></span>
+                                                                                            <span></span>
+                                                                                        </div> -->
                 <a href="cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
             </div>
 
@@ -296,8 +296,8 @@
                             <li>Month to mouth</li>
                             <li>No time restriction</li>
                         </ul>
-                        <a href="./donate" class="primary-btn pricing-btn ">Subscribe Now</a>
-                        <a href="./donate" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        <a href="./donate/1" class="primary-btn pricing-btn ">Subscribe Now</a>
+                        <a href="./donate/1" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
@@ -315,8 +315,8 @@
                             <li>Month to mouth</li>
                             <li>No time restriction</li>
                         </ul>
-                        <a href="./donate" class="primary-btn pricing-btn">Subscribe Now</a>
-                        <a href="./donate" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        <a href="./donate/2" class="primary-btn pricing-btn">Subscribe Now</a>
+                        <a href="./donate/2" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-8">
@@ -334,8 +334,8 @@
                             <li>Month to mouth</li>
                             <li>No time restriction</li>
                         </ul>
-                        <a href="./donate" class="primary-btn pricing-btn">Subscribe Now</a>
-                        <a href="./donate" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
+                        <a href="./donate/2" class="primary-btn pricing-btn">Subscribe Now</a>
+                        <a href="./donate/2" class="thumb-icon"><i class="fa fa-picture-o"></i></a>
                     </div>
                 </div>
             </div>

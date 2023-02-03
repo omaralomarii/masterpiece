@@ -38,11 +38,12 @@
                                     data-parent="#accordionExample">
                                     <div class="card-body">
                                         <div class="billing-address-form">
-                                            <form action="index.html">
-                                                <p><input type="text" placeholder="Name"></p>
-                                                <p><input type="email" placeholder="Email"></p>
-                                                <p><input type="text" placeholder="Address"></p>
-                                                <p><input type="tel" placeholder="Phone"></p>
+                                            <form action="/bill" id="billForm" method="POST">
+                                                @csrf
+                                                <p><input type="text" placeholder="Name" name="name"></p>
+                                                <p><input type="email" placeholder="Email" name="email"></p>
+                                                <p><input type="text" placeholder="Address" name="address"></p>
+                                                <p><input type="tel" placeholder="Phone" name="phone"></p>
                                                 <p>
                                                     <textarea name="bill" id="bill" cols="30" rows="10" placeholder="Say Something"></textarea>
                                                 </p>
@@ -92,7 +93,7 @@
 
                     </div>
                 </div>
-
+                {{-- {{ dd($cart->sum('price')) }} --}}
                 <div class="col-lg-4">
                     <div class="order-details-wrap">
                         <table class="order-details">
@@ -107,35 +108,40 @@
                                     <td>Product</td>
                                     <td>Total</td>
                                 </tr>
-                                <tr>
-                                    <td>Strawberry</td>
-                                    <td>$85.00</td>
-                                </tr>
-                                <tr>
-                                    <td>Berry</td>
-                                    <td>$70.00</td>
-                                </tr>
-                                <tr>
-                                    <td>Lemon</td>
-                                    <td>$35.00</td>
-                                </tr>
+
+                                @foreach ($cart as $c)
+                                    @php
+                                        $p = App\Models\Product::find($c['product_id']);
+                                    @endphp
+                                    <tr>
+                                        <td>{{ $p['name'] }}</td>
+                                        <td>JD {{ $p['price'] * $c['quantity'] }}</td>
+                                    </tr>
+                                @endforeach
+
                             </tbody>
                             <tbody class="checkout-details">
                                 <tr>
                                     <td>Subtotal</td>
-                                    <td>$190</td>
+                                    @php
+                                        $sum = 0;
+                                        foreach ($cart as $cc) {
+                                            $sum += $cc['price'] * $cc['quantity'];
+                                        }
+                                    @endphp
+                                    <td>JD {{ $sum }}</td>
                                 </tr>
                                 <tr>
                                     <td>Shipping</td>
-                                    <td>$50</td>
+                                    <td>JD 50</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
-                                    <td>$240</td>
+                                    <td>JD {{ $sum + 50 }}</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="#" class="boxed-btn">Place Order</a>
+                        <a href="#" class="boxed-btn" onclick="submit()">Place Order</a>
                     </div>
                 </div>
             </div>
@@ -169,5 +175,11 @@
             </div>
         </div>
     </div>
+    <script>
+        function submit() {
+            const billForm = document.getElementById('billForm');
+            billForm.submit()
+        }
+    </script>
     <!-- end logo carousel -->
 @endsection

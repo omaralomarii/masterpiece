@@ -1,6 +1,6 @@
 @extends('master')
-<link rel="stylesheet" href="{{ asset('assets/css/visa.css') }}">
-<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('../../assets/css/visa.css') }}">
+<link href="{{ asset('../../assets/css/bootstrap.min.css') }}" rel="stylesheet">
 @section('content')
     <!-- Page Header Start -->
     <div class="breadcrumb-section breadcrumb-bg">
@@ -21,21 +21,11 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
-
-
-
-
-
-
-
                     <br><br><br>
                 </div>
             </div>
         </div>
         <div class="row g-5 align-items-center">
-
-
-
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="h-100  p-5" style="background :linear-gradient(45deg, #9e1030, #000000); ">
                     <form action="/donate/details" method="post">
@@ -148,7 +138,20 @@
 
                             <div class="form-floating">
                                 <input type="number" name="amount" class="form-control   border-0"
-                                    placeholder="Enter the amount to be donated" value="">
+                                    @php
+$amount=0;
+                                    if($id == 1){
+                                        $amount = 39.5;
+                                    }
+                                    if($id == 2){
+                                        $amount = 99.9;
+                                    }
+                                    if($id == 1){
+                                        $amount = 59.9;
+                                    } @endphp
+                                    placeholder="Enter the amount to be donated" value="{{ $amount }}">
+                                <input type="text" value="{{ $id }}" name="sub_id" hidden>
+
                                 <label name="amount">Amount</label>
 
                                 @error('amount')
@@ -179,8 +182,8 @@
 
                         <div class="front">
                             <div class="image">
-                                <img src="assets/img/chip.png" alt="">
-                                <img src="assets/img/visa.png" alt="">
+                                <img src="../../assets/img/chip.png" alt="">
+                                <img src="../../assets/img/visa.png" alt="">
                             </div>
                             <div class="card-number-box">################</div>
                             <div class="flexbox">
@@ -203,7 +206,7 @@
                             <div class="box">
                                 <span>cvv</span>
                                 <div class="cvv-box"></div>
-                                <img src="assets/img/visa.png" alt="">
+                                <img src="../../assets/img/visa.png" alt="">
                             </div>
                         </div>
 

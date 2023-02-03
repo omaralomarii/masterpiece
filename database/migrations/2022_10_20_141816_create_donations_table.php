@@ -17,11 +17,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId("user_id")->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('name');
-
+            $table->string('sub_id');
             $table->string('email')->nullable();
             $table->string('card')->nullable();
             $table->timestamp('date')->nullable();
-
             $table->float('amount');
             $table->rememberToken();
             $table->timestamps();

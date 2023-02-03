@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Donation;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 // use Hash;
@@ -23,7 +24,8 @@ class CustomAuthController extends Controller
 
     {
         $user = Auth::user();
-        return view('Profile', ['user' => $user]);
+        $sub = Donation::where('user_id', $user->id)->get();
+        return view('Profile', ['user' => $user, 'sub' => $sub]);
     }
 
 

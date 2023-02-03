@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 
@@ -62,15 +63,36 @@ Route::get('/bmicalc', function () {
 });
 
 
-Route::get('/cart', function () {
-    return view('Cart');
+Route::get(
+    '/cart',
+    [CartController::class, 'index']
+
+);
+
+Route::get(
+    '/update-cart/{id}/{quantity}',
+    [CartController::class, 'update']
+
+);
+
+
+Route::get(
+    '/delete/{id}',
+    [CartController::class, 'delete']
+
+);
+
+
+
+
+Route::get('/dashboard', function () {
+    return view('admin');
 });
 
+Route::post('/add', [CartController::class, 'store']);
 
-Route::get('/checkout', function () {
-    return view('CheckOut');
-});
 
+Route::get('/checkout', [CartController::class, 'checkout']);
 
 Route::get('/single-product/{id}', [SingleController::class, 'index']);
 
@@ -99,7 +121,7 @@ Route::get('/shop', [ProductController::class, 'index']);
 
 // visa
 
-Route::get('/donate',  [DonationController::class, 'show']);
+Route::get('/donate/{id}',  [DonationController::class, 'show']);
 
 Route::post('/donate/details', [DonationController::class, 'store']);
 

@@ -1,3 +1,4 @@
+{{-- {{ dd($cart) }} --}}
 @extends('Master')
 @section('content')
     <!-- breadcrumb-section -->
@@ -33,38 +34,31 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="table-body-row">
-                                    <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a>
-                                    </td>
-                                    <td class="product-image"><img src="assets\img\Q.png" alt=""></td>
-                                    <td class="product-name">Whey gold</td>
-                                    <td class="product-price">$85</td>
-                                    <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                    <td class="product-total">1</td>
-                                </tr>
-                                <tr class="table-body-row">
-                                    <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a>
-                                    </td>
-                                    <td class="product-image"><img src="assets\img\Q.png" alt=""></td>
-                                    <td class="product-name">Whey gold</td>
-                                    <td class="product-price">$85</td>
-                                    <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                    <td class="product-total">1</td>
-                                </tr>
-                                <tr class="table-body-row">
-                                    <td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a>
-                                    </td>
-                                    <td class="product-image"><img src="assets\img\Q.png" alt=""></td>
-                                    <td class="product-name">Whey gold</td>
-                                    <td class="product-price">$85</td>
-                                    <td class="product-quantity"><input type="number" placeholder="0"></td>
-                                    <td class="product-total">1</td>
-                                </tr>
+                                @foreach ($cart as $c)
+                                    @php
+                                        $p = App\Models\Product::find($c['product_id']);
+                                    @endphp
+                                    <tr class="table-body-row" id="re-{{ $c['id'] }}">
+                                        <td class="product-remove" onclick="remove('re-{{ $c['id'] }}')"><a
+                                                href="#"><i class="far fa-window-close"></i></a>
+                                        </td>
+                                        <td class="product-image"><img src="{{ $p['image'] }}" alt=""></td>
+                                        <td class="product-name">{{ $p['name'] }}</td>
+                                        <td class="product-price">{{ $p['price'] }}</td>
+                                        <td class="product-quantity"><input type="number" placeholder="0"
+                                                value="{{ $c['quantity'] }}"
+                                                onchange="updateQ('{{ $c['id'] }}',{{ $p['price'] }})">
+                                        </td>
+                                        <td class="product-total" id="{{ $c['id'] }}">
+                                            {{ $p['price'] * $c['quantity'] }}
+                                        </td>
+                                    </tr>
+                                @endforeach
+
                             </tbody>
                         </table>
                     </div>
                 </div>
-
                 <div class="col-lg-4">
                     <div class="total-section">
                         <table class="total-table">
@@ -77,21 +71,27 @@
                             <tbody>
                                 <tr class="total-data">
                                     <td><strong>Subtotal: </strong></td>
-                                    <td>$500</td>
+                                    @php
+                                        $sum = 0;
+                                        foreach ($cart as $cc) {
+                                            $sum += $cc['price'] * $cc['quantity'];
+                                        }
+                                    @endphp
+                                    <td>JD {{ $sum }}</td>
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Shipping: </strong></td>
-                                    <td>$45</td>
+                                    <td>JD 50</td>
                                 </tr>
                                 <tr class="total-data">
                                     <td><strong>Total: </strong></td>
-                                    <td>$545</td>
+                                    <td>JD {{ $sum + 50 }}</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="cart-buttons">
-                            <a href="cart.html" class="boxed-btn">Update Cart</a>
-                            <a href="checkout.html" class="boxed-btn black">Check Out</a>
+                            {{-- {{ dd($cart) }} --}}
+                            <a href="/checkout" class="boxed-btn black">Check Out</a>
                         </div>
                     </div>
 
@@ -108,5 +108,20 @@
             </div>
         </div>
     </div>
+    <script>
+        function remove(id) {
+            const arr = id.split('-')
+            const row = document.getElementById(id).remove();
+            fetch(`/delete/${arr[1]}`).then(res => console.log(res.text()))
+            console.log(row);
+        }
+
+        function updateQ(id, price) {
+            const updateInput = document.getElementById(id);
+            // console.log((event.target.value) * price);
+            updateInput.textContent = (event.target.value) * price;
+            fetch(`/update-cart/${id}/${event.target.value}`).then(res => console.log(res.text()))
+        }
+    </script>
     <!-- end cart -->
 @endsection

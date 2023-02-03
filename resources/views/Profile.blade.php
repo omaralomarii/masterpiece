@@ -94,8 +94,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-12">
+                        {{-- {{ dd($sub[0]['created_at']) }} --}}
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <div class="card text-center">
+                                    <div class="card-header">subsecribe</div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Subscription Date and Type</h5>
+                                        <p class="card-text">{{ $sub[0]['created_at'] }} | Premium
+                                            .</p>
 
+                                    </div>
+                                    @php
+                                        $remain = 0;
+                                        
+                                        if ($sub[0]['sub_id'] == 2) {
+                                            $datetime1 = date_create($sub[0]['created_at']);
+                                            $remain = $datetime1->modify('+1 year');
+                                        }
+                                    @endphp
+                                    <div class="card-footer text-muted"> End at :
+                                        {{ $remain->format('Y-m-d H:i:s') }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </section>

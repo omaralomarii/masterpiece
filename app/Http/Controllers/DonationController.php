@@ -40,11 +40,11 @@ class DonationController extends Controller
      * @param  \App\Models\Donation  $donation
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($id)
     {
 
-        // dd($request->amount);
-        return view('donate');
+
+        return view('donate', ['id' => $id]);
     }
 
     public function showWithGet()
@@ -75,6 +75,7 @@ class DonationController extends Controller
         Donation::create([
             'name' => $request->name,
             "user_id" => $user->id,
+            'sub_id' => $request->sub_id,
             'email' => $request->email,
             'amount' => $request->amount,
             'card' => $request->card,

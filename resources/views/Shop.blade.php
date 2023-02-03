@@ -51,11 +51,18 @@
                                             <p class="price"><span>jd {{ $item['price'] }}</span></p>
                                         </div>
                                         <p class="bottom-area d-flex px-3">
-                                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i
-                                                        class="ion-ios-add ml-1"></i></span></a>
-                                            <a href="./single-product/{{ $item['id'] }}"
-                                                class="buy-now text-center py-2">View Details<span><i
-                                                        class="ion-ios-cart ml-1"></i></span></a>
+                                        <form action="/add" method="POST" style="display: none" id="{{ $item['id'] }}">
+                                            @csrf
+                                            <input type="text" name="price" value="{{ $item['price'] }}">
+                                            <input type="text" name="product_id" value="{{ $item['id'] }}">
+                                        </form>
+
+                                        <a href="#" class="add-to-cart text-center py-2 mr-1"
+                                            onclick="addToCart('{{ 'add-' . $item['id'] }}')">
+                                            <span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+
+                                        <a href="./single-product/{{ $item['id'] }}" class="buy-now text-center py-2">View
+                                            Details<span><i class="ion-ios-cart ml-1"></i></span></a>
                                         </p>
                                     </div>
                                 </div>
@@ -125,4 +132,12 @@
         </div>
         </div>
     </section>
+    <script>
+        function addToCart(id) {
+            const paramArray = id.split('-');
+            const formm = document.getElementById(paramArray[1]);
+            formm.submit();
+            console.log(formm);
+        }
+    </script>
 @endsection

@@ -15,6 +15,6 @@ class Donation extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'card_num', 'amount', 'user_id'
+        'name', 'email', 'card_num', 'amount', 'user_id', 'sub_id'
     ];
 }
